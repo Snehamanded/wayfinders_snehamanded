@@ -1,60 +1,51 @@
-Way Finders
-Way Finders is a 2D robot navigation project using Pygame, allowing the robot to move around a grid and avoid obstacles within various room layouts.
+IRDP 1: ROS 2 Virtual Robot Navigation Project (Way_Finders)
+This project is a speech-guided autonomous robot navigation system using ROS 2 and Gazebo in a Docker environment. It simulates a virtual robot that receives voice commands, interprets them, and navigates accordingly using speech recognition and natural language processing.
 
-Table of Contents
+Setup, Installation, and Usage Guide
+
 Prerequisites
-Installation
-Cloning the Repository
-Running the Project
-Project Structure
-Usage
-License
-Prerequisites
-Ensure you have the following installed:
+Docker: Download and install Docker Desktop for your operating system.
+X Server (for GUI support on Windows): Install an X server like VcXsrv or Xming to display the Gazebo GUI in WSL or on Windows.
 
-Python 3.7 or later
-Pygame library for creating the 2D environment
-SpeechRecognition library for recognizing voice commands (if applicable)
-PyAudio (for microphone input)
-To install the required Python packages, run:
+Installation and Setup
+1. Clone the Repository
+Clone the project repository and navigate into the project folder:
+git clone https://github.com/Hack2Future-IIIT-Dharwad/wayfinders.git
+cd ros2-navigation-project
+2. Build the Docker Image
+Use the provided Dockerfile to create a Docker image that includes ROS 2, Gazebo, Whisper, and LLaMa:
+docker build -t ros2_navigation_project .
+3. Run the Docker Container
+Linux and macOS: Use xhost to allow Docker access to the X server:
+xhost +local:docker
+docker run -it --rm \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    ros2_navigation_project
 
-bash
-Copy code
-pip install pygame SpeechRecognition pyaudio
-Installation
-Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/yourusername/Way_Finders.git
-Navigate into the project directory:
-
-bash
-Copy code
-cd Way_Finders
-Install dependencies (if not installed already):
-
-bash
-Copy code
-pip install -r requirements.txt
-Note: Ensure you have pyaudio installed if using the voice command feature. If installation fails on Windows, use a .whl file from this link.
-
-Running the Project
-To run the project, execute the following command in your terminal:
-
-bash
-Copy code
-python robo.py
-This will launch a Pygame window where the robot will navigate according to the obstacle placements and command inputs.
-
-Project Structure
-robo.py - Main script that initializes Pygame, sets up robot movement, and handles obstacles.
-Room Images - PNG files (bathroom.png, bedroom.png, etc.) representing the various room layouts.
-Other Python Files - Supporting code for virtual robot logic, voice recognition, and robot control.
-Wall Image - wall.png, which is used to represent obstacles or walls.
-Usage
-Run robo.py to open the simulation window.
-Use voice commands (if implemented) to direct the robot or manually control it through the code.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
+Windows (WSL 2):
+Start the X server (e.g., VcXsrv) with “Disable access control” enabled.
+Run Docker in WSL with the display configured:
+docker run -it --rm \
+    -e DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0 \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    ros2_navigation_project
+4. Build the ROS Workspace in Docker
+Once inside the Docker container:
+source /opt/ros/humble/setup.bash
+cd ~/ros2_ws
+colcon build
+5. Launch Gazebo with TurtleBot3
+Run a pre-configured Gazebo world with TurtleBot3:
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch
+To customize environments, modify .world files in ~/ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo/worlds/.
+6. Set Up Speech Recognition and LLM
+Activate the Python virtual environment:
+source ~/ros2_ws/venv/bin/activate
+Use Whisper for capturing and transcribing speech, and LLaMa for processing commands to generate navigation goals (e.g., "Go to the kitchen").
+7. Run the Project Workflow
+Simulate Speech-to-Text: Run a Python script to capture and transcribe speech using Whisper and interpret it with LLaMa.
+Send Navigation Goals: Use LLaMa's output as navigation goals for ROS's Navigation stack.
+To visualize in RViz, run:
+ros2 launch turtlebot3_navigation2 navigation_launch.py
+rviz2
