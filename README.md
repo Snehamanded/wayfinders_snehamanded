@@ -29,3 +29,7 @@ Voice-Guided Navigation: Real-time response to voice commands using advanced STT
 Dynamic Path Planning & Obstacle Avoidance: A* algorithm and sensor-based localization for flexible and safe navigation.
 Comprehensive Simulation Environment: Testing in dynamic scenarios through ROS Noetic and Gazebo.
 Enhanced Accessibility: Voice-guided navigation provides an intuitive interface for all users.
+
+Links
+GitHub Repository:https://github.com/Snehamanded/wayfinders_snehamanded
+Demo Video : https://drive.google.com/file/d/1y5oMhIQmnoC7E3xXlbnqZOiFvv5vbKJt/view?usp=sharing
