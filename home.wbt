@@ -1,0 +1,124 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/bedroom/protos/Bed.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/kitchen/fridge/protos/Fridge.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/kitchen/components/protos/Worktop.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/living_room_furniture/protos/Sofa.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/obstacles/protos/OilBarrel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/range_rover/RangeRoverSportSVRSimple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/television/protos/Television.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/adept/pioneer3/protos/Pioneer3at.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.3691568330576756 0.36863525412547377 0.8531302843192679 1.6304922722603024
+  position -3.344573575244276 -5.8322149613785035 12.503728127363061
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0.55 0.02 0
+  rotation 0 0 -1 1.5708
+  floorSize 15 15
+}
+Television {
+  translation -1.80999 -1.79 1.74
+  rotation -0.1294279597735375 0.1294279597735375 0.9831056944488314 1.58784
+}
+RangeRoverSportSVRSimple {
+  translation -3.23 -5.35 0.2
+}
+Sofa {
+  translation -0.980002 6.7 0
+  rotation 0 0 1 -1.5707953071795862
+}
+Worktop {
+  translation 2.53 -4.87 0.83
+  size 1.2 3 0.06
+}
+Wall {
+  translation -2.28 -2.4 1.06995e-05
+  rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(7)"
+  size 0.2 3 2.4
+}
+Wall {
+  translation 1.57 1.59 0
+  name "wall(5)"
+  size 0.2 4 2.4
+}
+Wall {
+  translation 1.83 -5.33 0
+  size 0.2 4 2.4
+}
+Wall {
+  translation 3.95997 -0.520001 0
+  rotation 0 0 1 1.5708
+  name "wall(4)"
+  size 0.2 5 2.4
+}
+Wall {
+  translation 1.62997 -7.39 0
+  rotation 0 0 1 1.5708
+  name "wall(3)"
+  size 0.2 13 2.4
+}
+Wall {
+  translation 8.08 0 0
+  name "wall(1)"
+  size 0.2 15 2.4
+}
+Wall {
+  translation 2.15997 7.47 0
+  rotation 0 0 1 1.5708
+  name "wall(2)"
+  size 0.2 12 2.4
+}
+Wall {
+  translation -3.82 2.45 0
+  name "wall(6)"
+  size 0.2 10 2.4
+}
+Bed {
+  translation 5.37 5.44 0
+}
+Fridge {
+  hidden position_0_0 -0.0005075737322265725
+  hidden position_0_1 0.000507570075337181
+  hidden rotation_1 0 0 -1 0.0005075737324195993
+  hidden rotation_2 0 0 1 0.0005075700752177267
+  translation 6.64 -6.42 0
+}
+OilBarrel {
+  translation -4.96 0 0.44
+}
+Pioneer3at {
+  hidden position_0_0 115.78149111540455
+  hidden position_0_1 114.89119694623786
+  hidden position_0_2 115.77470215677127
+  hidden position_0_3 114.8843161033613
+  hidden linearVelocity_0 -0.00041376886635044826 1.8794043951014703e-05 2.8126160137844637e-05
+  hidden angularVelocity_0 0.00022280488319677331 3.804101648801623e-05 -0.001635371441958815
+  hidden rotation_1 -0.4671697777811827 0.46716239443430174 -0.7506741609741808 1.8537356767207518
+  hidden linearVelocity_1 -0.0006353930438649018 0.000357639125997212 6.086429553164437e-06
+  hidden angularVelocity_1 -4.999729191393123 -0.00575015584325024 -0.00172217484653207
+  hidden rotation_2 -0.11061844709957072 0.11061394102478123 -0.987688268236616 1.583194110027301
+  hidden linearVelocity_2 -0.000628897433361048 -0.0002865720116785419 -8.509939757573066e-06
+  hidden angularVelocity_2 -4.999729211180711 -0.005749648570154424 -0.0017211537118857765
+  hidden rotation_3 -0.4651720783511927 0.4651647072126002 -0.7531512017425503 1.850570905196261
+  hidden linearVelocity_3 -0.00019705160722103534 0.0003567209618344591 6.551208634857858e-05
+  hidden angularVelocity_3 -4.999773845629405 -0.0057499550346572365 -0.001721664082214798
+  hidden rotation_4 -0.10725944636207102 0.10725497247433566 -0.9884289463818992 1.582444546277001
+  hidden linearVelocity_4 -0.00019632392517982165 -0.0002876124633956381 5.062378380960224e-05
+  hidden angularVelocity_4 -4.999773845629396 -0.005749955041092417 -0.0017216640841996038
+  translation -2.7612243866990855 7.127194612263138 -0.0021795479111473004
+  rotation 0.01228786778645731 -0.012274408595142401 0.9998491622234336 1.5720695372101783
+  controller "machine"
+}
