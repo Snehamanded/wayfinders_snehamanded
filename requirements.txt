@@ -1,0 +1,17 @@
+# Speech-to-Text and Language Processing
+SpeechRecognition==3.8.1       # For converting speech to text
+pyaudio==0.2.11                # For audio handling in STT
+transformers==4.33.0           # For using Large Language Models
+torch==2.0.1                   # Backend for transformers, specifically with LLMs
+
+# ROS Integration
+roslibpy==1.4.0                # For ROS communication with Python
+rospy                          # ROS Python library (requires ROS setup for Windows)
+
+# Simulation and Visualization
+numpy==1.23.5                  # For numerical calculations, often useful in robotics
+matplotlib==3.6.3              # Optional: For visualizing data or navigation paths
+opencv-python==4.8.0.76        # For any computer vision tasks, if needed
+
+# Optional Dependencies
+pybullet==3.2.5                # For physics simulation if needed as an alternative to Gazebo
